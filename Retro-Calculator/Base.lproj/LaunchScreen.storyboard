@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +16,43 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchBG" translatesAutoresizingMaskIntoConstraints="NO" id="xFz-7g-T1L">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchTitle" translatesAutoresizingMaskIntoConstraints="NO" id="xoj-Q8-krd">
+                                <rect key="frame" x="150" y="122" width="300" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="EkV-DJ-h5F"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xoj-Q8-krd" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="100" id="3wN-jl-siS"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="xFz-7g-T1L" secondAttribute="bottom" id="MmQ-Jw-CeH"/>
+                            <constraint firstItem="xoj-Q8-krd" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="102" id="WCZ-2H-wyT"/>
+                            <constraint firstItem="xoj-Q8-krd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ygp-I6-6ho"/>
+                            <constraint firstAttribute="trailing" secondItem="xFz-7g-T1L" secondAttribute="trailing" id="bP9-rA-mNm"/>
+                            <constraint firstItem="xoj-Q8-krd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fAJ-Ik-PQw"/>
+                            <constraint firstItem="xFz-7g-T1L" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="q8V-rj-VNm"/>
+                            <constraint firstItem="xFz-7g-T1L" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="sAs-kK-mlo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3wN-jl-siS"/>
+                                <exclude reference="Ygp-I6-6ho"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="539" y="440"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchBG" width="1920" height="1080"/>
+        <image name="LaunchTitle" width="1010" height="70"/>
+    </resources>
 </document>
