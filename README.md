@@ -1,2 +1,2 @@
 # RetroCalculator
-The Retro Calculator app created in the iOS course
+The Retro Calculator app - Swift / 2015
